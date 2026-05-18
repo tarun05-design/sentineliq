@@ -1221,6 +1221,13 @@ streamlit run app.py
 </div>
 """, unsafe_allow_html=True)
 
+    # ── Footer ──────────────────────────────────────────────────────────
+    st.markdown(
+        '<div style="text-align:center; padding: 2rem 0; margin-top: 2rem; border-top: 1px solid #22273a; color: #5a6a7d; font-size: 0.85rem; letter-spacing: 0.03em;">'
+        'Predictive Maintenance Intelligence Platform &middot; Designed & Built By Tarun P'
+        '</div>',
+        unsafe_allow_html=True,
+    )
 
 # ─────────────────────────────────────────────────────────
 # RUN
