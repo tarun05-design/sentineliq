@@ -1,0 +1,2355 @@
+/* ── Global reset ────────────────────────────────────── */
+[data-testid="stAppViewContainer"] {
+    background: #0d0f12;
+}
+
+[data-testid="stSidebar"] {
+    background: linear-gradient(180deg, #171717 0%, #202020 100%) !important;
+    border-right: 1px solid #3a3a3a;
+}
+
+[data-testid="stSidebar"]>div:first-child {
+    padding: 0;
+}
+
+[data-testid="stMainBlockContainer"] {
+    padding: 1.5rem 2.5rem 3.5rem;
+    max-width: 100%;
+}
+
+/* Remove default streamlit top padding — keep enough room for toolbar */
+.block-container {
+    padding-top: 4rem !important;
+}
+
+/* ─── SIDEBAR ────────────────────────────────────────── */
+
+/* Brand header */
+.brand-header {
+    background: linear-gradient(135deg, #0f4c91 0%, #114f99 100%);
+    padding: 1.3rem 1.2rem 1.1rem;
+    border-bottom: 1px solid #1a3a6a;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.13);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.brand-title {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #f3f7ff;
+    margin: 0 0 1px;
+    letter-spacing: -0.2px;
+}
+
+.brand-subtitle {
+    font-size: 0.78rem;
+    color: #bdd4ff;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+}
+
+/* Section label */
+.sb-label {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #9a9a9a;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1.1rem 1rem 0.45rem;
+}
+
+.sb-divider {
+    border: none;
+    border-top: 1px solid #1a1f2e;
+    margin: 0.75rem 0;
+}
+
+/* Model selector cards */
+.model-card {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0.75rem 0.5rem;
+    padding: 0.6rem 0.85rem;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #6b7a8d;
+    cursor: pointer;
+}
+
+.model-card.active {
+    background: #0f2240;
+    border-color: #1d4ed8;
+    color: #60a5fa;
+    font-weight: 600;
+}
+
+.model-card .mc-icon {
+    font-size: 0.9rem;
+}
+
+.model-card .mc-check {
+    margin-left: auto;
+    color: #3b82f6;
+    font-size: 0.85rem;
+}
+
+/* Metric bars */
+.sb-metric {
+    padding: 0 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.sb-metric-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.76rem;
+    margin-bottom: 3px;
+}
+
+.sb-metric-label {
+    color: #5a6a7d;
+}
+
+.sb-metric-value {
+    color: #c0d0e0;
+    font-weight: 700;
+    font-size: 0.82rem;
+}
+
+.sb-metric-star {
+    color: #f59e0b;
+}
+
+.sb-bar-bg {
+    background: #1a2030;
+    border-radius: 3px;
+    height: 3px;
+}
+
+.sb-bar-fill {
+    height: 3px;
+    border-radius: 3px;
+    background: #2563eb;
+}
+
+.sb-bar-fill.recall {
+    background: #10b981;
+}
+
+/* Best model badge */
+.best-badge {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0.4rem 1rem 0;
+    background: #0a2010;
+    border: 1px solid #166534;
+    border-radius: 7px;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.77rem;
+    color: #4ade80;
+    font-weight: 600;
+}
+
+/* Quick data card */
+.sb-data-card {
+    margin: 0 1rem 0.4rem;
+    background: #1f1f1f;
+    border: 1px solid #353535;
+    border-radius: 7px;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.73rem;
+    color: #5a6a7d;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.sb-data-name {
+    color: #8899aa;
+    font-weight: 500;
+    font-size: 0.76rem;
+}
+
+.sb-data-sub {
+    color: #9a9a9a;
+    font-size: 0.68rem;
+    margin-top: 1px;
+}
+
+/* ─── ALERT BANNERS ──────────────────────────────────── */
+.alert-critical {
+    background: linear-gradient(90deg, #5d0b0b 0%, #6f0f0f 100%);
+    border: 1px solid #7f1d1d;
+    border-radius: 14px;
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #fca5a5;
+    line-height: 1.4;
+}
+
+.alert-critical strong {
+    color: #f87171;
+}
+
+.alert-ok {
+    background: linear-gradient(90deg, #0a2a0f 0%, #08320d 100%);
+    border: 1px solid #14532d;
+    border-radius: 14px;
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #86efac;
+}
+
+.alert-ok strong {
+    color: #4ade80;
+}
+
+.alert-info {
+    background: #0a1628;
+    border: 1px solid #1e3a5f;
+    border-radius: 14px;
+    padding: 1.1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #93c5fd;
+}
+
+.alert-icon {
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+/* ─── INLINE KPI ROW ─────────────────────────────────── */
+/* Matches mockup: 4 flat metrics with no heavy card borders */
+.kpi-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    background: #1a1f2e;
+    border: 1px solid #343434;
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+}
+
+.kpi-cell {
+    background: #232323;
+    padding: 1.1rem 1.4rem;
+}
+
+.kpi-cell:first-child {
+    border-radius: 10px 0 0 10px;
+}
+
+.kpi-cell:last-child {
+    border-radius: 0 10px 10px 0;
+}
+
+.kpi-lbl {
+    font-size: 0.67rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #9a9a9a;
+    margin-bottom: 0.3rem;
+}
+
+.kpi-num {
+    font-size: 2.35rem;
+    font-weight: 800;
+    color: #dde5f0;
+    line-height: 1;
+}
+
+.kpi-num.orange {
+    color: #f97316;
+}
+
+.kpi-num.red {
+    color: #ef4444;
+}
+
+.kpi-num.dkred {
+    color: #b91c1c;
+}
+
+.kpi-sub {
+    font-size: 0.7rem;
+    color: #9a9a9a;
+    margin-top: 0.2rem;
+}
+
+/* ─── TABS ───────────────────────────────────────────── */
+[data-testid="stTabs"] {
+    border-bottom: 1px solid #1a1f2e;
+    margin-bottom: 0;
+}
+
+[data-testid="stTabs"] button {
+    font-size: 0.83rem;
+    font-weight: 500;
+    color: #5a6a7d;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0;
+    border-bottom: 2px solid transparent;
+    gap: 6px;
+}
+
+[data-testid="stTabs"] button[aria-selected="true"] {
+    color: #e2e8f0 !important;
+    border-bottom-color: #ef4444 !important;
+}
+
+[data-testid="stTabsContent"] {
+    padding-top: 1.2rem;
+}
+
+/* ─── FILTER ROW ─────────────────────────────────────── */
+.filter-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.filter-lbl {
+    font-size: 0.75rem;
+    color: #4a5568;
+    margin-right: 4px;
+}
+
+.ftag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 11px;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.ftag-fail {
+    background: #3a0808;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+}
+
+.ftag-neut {
+    background: #232323;
+    color: #8899aa;
+    border: 1px solid #22273a;
+}
+
+.shown-count {
+    margin-left: auto;
+    font-size: 0.74rem;
+    color: #9a9a9a;
+}
+
+/* ─── PREDICTION TABLE custom HTML version ───────────── */
+.pred-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+}
+
+.pred-table th {
+    text-align: left;
+    padding: 0.65rem 1rem;
+    font-size: 0.68rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #4a5568;
+    border-bottom: 1px solid #1a1f2e;
+}
+
+.pred-table td {
+    padding: 0.6rem 1rem;
+    color: #c0d0e0;
+    border-bottom: 1px solid #12151c;
+}
+
+.pred-table tr.row-fail td {
+    background: #1e0a0a;
+    color: #fca5a5;
+}
+
+.pred-table tr.row-fail-hi td {
+    background: #2a0808;
+    color: #f87171;
+}
+
+.pred-table tr.row-ok td {
+    background: #0a140d;
+    color: #86efac;
+}
+
+/* Status pills inside table */
+.tpill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 700;
+}
+
+.tpill-fail {
+    background: #3a0808;
+    color: #fca5a5;
+    border: 1px solid #7f1d1d;
+}
+
+.tpill-ok {
+    background: #0a1f0d;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.tdot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.tdot-r {
+    background: #ef4444;
+}
+
+.tdot-g {
+    background: #22c55e;
+}
+
+.conf-hi {
+    color: #f97316;
+    font-weight: 700;
+}
+
+.conf-ok {
+    color: #6b7a8d;
+}
+
+/* Table overflow note */
+.table-more {
+    text-align: center;
+    padding: 0.6rem;
+    font-size: 0.75rem;
+    color: #9a9a9a;
+    border-top: 1px solid #12151c;
+}
+
+/* ─── LOADED / EXPORT FOOTER ─────────────────────────── */
+.loaded-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.6rem;
+}
+
+.loaded-pill {
+    flex: 1;
+    background: linear-gradient(90deg, #0a2a0f 0%, #08320d 100%);
+    border: 1px solid #14532d;
+    border-radius: 7px;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.8rem;
+    color: #4ade80;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* ─── SECTION HEADER ─────────────────────────────────── */
+.sec-hdr {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9a9a9a;
+    margin: 1.5rem 0 0.75rem;
+}
+
+/* ─── GAUGE BAR ──────────────────────────────────────── */
+.gauge-wrap {
+    margin: 0.3rem 0 0.7rem;
+}
+
+.gauge-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: #9a9a9a;
+    margin-bottom: 3px;
+}
+
+.gauge-bar {
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(to right, #16a34a 0%, #d97706 35%, #dc2626 72%, #7f1d1d 100%);
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.gauge-needle {
+    position: absolute;
+    top: -4px;
+    width: 3px;
+    height: 18px;
+    background: #fff;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
+
+.gauge-readout {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.gauge-num {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #dde5f0;
+}
+
+.gauge-desc {
+    font-size: 0.77rem;
+    color: #5a6a7d;
+}
+
+/* ─── HOW-IT-WORKS CARD ──────────────────────────────── */
+.how-card {
+    background: #232323;
+    border: 1px solid #1e2535;
+    border-radius: 18px;
+    padding: 1.1rem 1.2rem;
+    height: 100%;
+}
+
+.how-card h4 {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #93c5fd;
+    margin: 0 0 0.55rem;
+}
+
+.how-card p,
+.how-card li {
+    font-size: 0.8rem;
+    color: #8899aa;
+    line-height: 1.7;
+}
+
+/* ─── REQ COLS BOX ───────────────────────────────────── */
+.req-box {
+    background: #16253d;
+    border: 1px solid #2e4d73;
+    border-radius: 14px;
+    padding: 0.8rem 1rem;
+    font-size: 0.78rem;
+    color: #7bafd4;
+    line-height: 1.8;
+    height: 100%;
+}
+
+.req-box strong {
+    color: #60a5fa;
+    display: block;
+    margin-bottom: 3px;
+    font-size: 0.76rem;
+}
+
+/* ─── STATUS INDICATOR PANEL ─────────────────────────── */
+.si-panel {
+    background: #232323;
+    border: 1px solid #1e2535;
+    border-radius: 18px;
+    padding: 1.1rem 1.4rem;
+    margin-top: 1.2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.si-title {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #9a9a9a;
+    margin-bottom: 0.7rem;
+}
+
+.si-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 0.55rem;
+    font-size: 0.8rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.dot-g {
+    background: #22c55e;
+    box-shadow: 0 0 5px #22c55e55;
+}
+
+.dot-a {
+    background: #f59e0b;
+    box-shadow: 0 0 5px #f59e0b55;
+}
+
+.dot-r {
+    background: #ef4444;
+    box-shadow: 0 0 5px #ef444455;
+}
+
+.dot-d {
+    background: #b91c1c;
+    box-shadow: 0 0 5px #b91c1c55;
+}
+
+.sp {
+    padding: 2px 9px;
+    border-radius: 20px;
+    font-size: 0.73rem;
+    font-weight: 600;
+}
+
+.sp-n {
+    background: #0a1f10;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.sp-m {
+    background: #241800;
+    color: #fbbf24;
+    border: 1px solid #78350f;
+}
+
+.sp-h {
+    background: #200a0a;
+    color: #f87171;
+    border: 1px solid #7f1d1d;
+}
+
+.sp-c {
+    background: #2e0505;
+    color: #fca5a5;
+    border: 1px solid #991b1b;
+}
+
+.sp-txt {
+    color: #5a6a7d;
+}
+
+.band-row {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 0.55rem;
+    font-size: 0.79rem;
+    color: #8899aa;
+}
+
+.band-sw {
+    width: 26px;
+    height: 6px;
+    border-radius: 3px;
+    flex-shrink: 0;
+}
+
+.bw-g {
+    background: #22c55e;
+}
+
+.bw-a {
+    background: #f59e0b;
+}
+
+.bw-r {
+    background: #ef4444;
+}
+
+.bw-d {
+    background: #b91c1c;
+}
+
+.mg-labels {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.62rem;
+    color: #3d4a5c;
+    margin-bottom: 3px;
+}
+
+.mg-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #16a34a 0%, #d97706 38%, #dc2626 74%, #7f1d1d 100%);
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.mg-needle {
+    position: absolute;
+    top: -3px;
+    width: 3px;
+    height: 14px;
+    background: #fff;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.mg-num {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #dde5f0;
+}
+
+.mg-sub {
+    font-size: 0.7rem;
+    color: #5a6a7d;
+    margin-top: 1px;
+}
+
+/* ─── MISC ───────────────────────────────────────────── */
+h1,
+h2,
+h3 {
+    color: #c8d8ea !important;
+}
+
+.page-title {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    color: #f5f5f5 !important;
+    margin: 0.5rem 0 0.25rem !important;
+    letter-spacing: -0.03em !important;
+    line-height: 1.2 !important;
+}
+
+.stMarkdown p {
+    color: #8899aa;
+}
+
+/* Force radio buttons in sidebar to match compact style */
+div[data-testid="stSidebar"] .stRadio label {
+    display: none;
+}
+
+div[data-testid="stSidebar"] .stRadio div[role="radiogroup"] {
+    gap: 0 !important;
+}
+
+div[data-testid="stSidebar"] .stRadio [data-testid="stMarkdownContainer"] p {
+    font-size: 0.82rem;
+    color: #8899aa;
+}
+
+
+/* Enhanced sidebar radio buttons */
+div[data-testid="stSidebar"] .stRadio>div {
+    gap: 0.7rem !important;
+}
+
+div[data-testid="stSidebar"] .stRadio label {
+    display: flex !important;
+    align-items: center;
+    background: #252525;
+    border: 1px solid #3b3b3b;
+    border-radius: 14px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.55rem;
+    transition: all 0.2s ease;
+}
+
+div[data-testid="stSidebar"] .stRadio label:hover {
+    border-color: #2563eb;
+    background: #1d2d46;
+}
+
+div[data-testid="stSidebar"] .stRadio label[data-baseweb="radio"] {
+    background: #0b2f57;
+    border-color: #2563eb;
+}
+
+div[data-testid="stSidebar"] .stRadio [data-testid="stMarkdownContainer"] p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #f1f5f9;
+}
+
+
+/* Hide streamlit default upload label */
+[data-testid="stFileUploaderDropzone"] {
+    background: #242424 !important;
+    border-color: #404040 !important;
+}
+
+[data-testid="stFileUploaderDropzone"] p {
+    color: #4a5568 !important;
+}
+
+/* Tighten Streamlit's default element spacing */
+div[data-testid="stVerticalBlock"]>div {
+    gap: 0.5rem;
+}
+
+/* Phase 1 enhanced section headers */
+.phase-title {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f5f5f5;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.03em;
+}
+
+.phase-subtitle {
+    font-size: 0.95rem;
+    color: #a3a3a3;
+    margin-bottom: 1.25rem;
+}
+
+/* ── Enhanced Panel Cards (matching How It Works) ──── */
+.panel-card {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 16px;
+    padding: 1.5rem 1.6rem;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+}
+
+.panel-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    border-radius: 16px 16px 0 0;
+}
+
+.panel-card.accent-green::before {
+    background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.panel-card.accent-amber::before {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+.panel-card.accent-red::before {
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+}
+
+.panel-card.accent-purple::before {
+    background: linear-gradient(90deg, #4338ca, #818cf8);
+}
+
+.panel-card-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 1rem;
+}
+
+.panel-card-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #0f2240;
+    border: 1px solid #1d4ed8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.panel-card-icon.gi-green {
+    background: #0a2010;
+    border-color: #166534;
+}
+
+.panel-card-icon.gi-amber {
+    background: #1a1000;
+    border-color: #78350f;
+}
+
+.panel-card-icon.gi-red {
+    background: #200a0a;
+    border-color: #7f1d1d;
+}
+
+.panel-card-icon.gi-purp {
+    background: #12103a;
+    border-color: #4338ca;
+}
+
+.panel-card p {
+    font-size: 0.79rem;
+    color: #6b7a8d;
+    line-height: 1.7;
+    margin: 0 0 0.5rem;
+}
+
+.panel-card p:last-child {
+    margin-bottom: 0;
+}
+
+.panel-card strong {
+    color: #93c5fd;
+}
+
+/* ── Info pills (like ds-pills) ─────────────────────── */
+.info-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.6rem;
+}
+
+.info-pill {
+    font-size: 0.71rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #0f2240;
+    color: #60a5fa;
+    border: 1px solid #1d4ed8;
+}
+
+.info-pill.green {
+    background: #0a2010;
+    color: #4ade80;
+    border-color: #166534;
+}
+
+.info-pill.amber {
+    background: #1a1000;
+    color: #fbbf24;
+    border-color: #78350f;
+}
+
+.info-pill.red {
+    background: #200a0a;
+    color: #f87171;
+    border-color: #7f1d1d;
+}
+
+/* ── Stat tiles row ──────────────────────────────────── */
+.stat-tiles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 0.9rem 0;
+}
+
+.stat-tile {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.stat-tile-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    background: #0f2240;
+    border: 1px solid #1d4ed8;
+}
+
+.stat-tile-icon.ti-green {
+    background: #0a2010;
+    border-color: #166534;
+}
+
+.stat-tile-icon.ti-amber {
+    background: #1a1000;
+    border-color: #78350f;
+}
+
+.stat-tile-icon.ti-red {
+    background: #200a0a;
+    border-color: #7f1d1d;
+}
+
+.stat-tile-icon.ti-purp {
+    background: #12103a;
+    border-color: #4338ca;
+}
+
+.stat-tile-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #4a5568;
+}
+
+.stat-tile-value {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #dde5f0;
+    line-height: 1.1;
+}
+
+.stat-tile-sub {
+    font-size: 0.68rem;
+    color: #4a5568;
+    margin-top: 2px;
+}
+
+/* ── Insight cards grid ──────────────────────────────── */
+.insight-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 0.9rem;
+}
+
+.insight-card {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+}
+
+.insight-card-head {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 8px;
+}
+
+.insight-card-body {
+    font-size: 0.73rem;
+    color: #5a6a7d;
+    line-height: 1.6;
+}
+
+.insight-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 10px;
+    margin-left: auto;
+    letter-spacing: 0.04em;
+}
+
+.ib-blue {
+    background: #0f2240;
+    color: #60a5fa;
+    border: 1px solid #1d4ed8;
+}
+
+.ib-green {
+    background: #0a2010;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.ib-amber {
+    background: #1a1000;
+    color: #fbbf24;
+    border: 1px solid #78350f;
+}
+
+.ib-red {
+    background: #200a0a;
+    color: #f87171;
+    border: 1px solid #7f1d1d;
+}
+
+/* ── Comparison table enhancement ───────────────────── */
+.cmp-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+}
+
+.cmp-table th {
+    text-align: left;
+    padding: 0.65rem 1rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #4a5568;
+    border-bottom: 1px solid #22273a;
+    background: #161920;
+}
+
+.cmp-table td {
+    padding: 0.6rem 1rem;
+    color: #c0d0e0;
+    border-bottom: 1px solid #12151c;
+}
+
+.cmp-table tr:hover td {
+    background: #1e2535;
+}
+
+.cmp-table td.best {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+.cmp-table td.metric-name {
+    color: #8899aa;
+    font-weight: 600;
+}
+
+.cmp-table td.star-row {
+    color: #f59e0b;
+}
+
+.cmp-table .winner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 10px;
+    background: #0a2010;
+    color: #4ade80;
+    border: 1px solid #166534;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+
+/* ── Feature importance card wrapper ────────────────── */
+.fi-card {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 14px;
+    padding: 0.9rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.fi-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    border-radius: 14px 14px 0 0;
+}
+
+.fi-card.fi-blue::before {
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+}
+
+.fi-card.fi-amber::before {
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+}
+
+/* ── Chart label cards (self-contained, above charts) ── */
+.chart-label-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-top: 3px solid #2563eb;
+    border-radius: 12px 12px 0 0;
+    padding: 0.75rem 1rem;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    margin-bottom: -1px;
+}
+
+.chart-label-card.chart-label-blue {
+    border-top-color: #3b82f6;
+}
+
+.chart-label-card.chart-label-amber {
+    border-top-color: #f59e0b;
+}
+
+.chart-label-card.chart-label-green {
+    border-top-color: #22c55e;
+}
+
+.chart-label-card.chart-label-red {
+    border-top-color: #ef4444;
+}
+
+.clc-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #3b82f6;
+    flex-shrink: 0;
+}
+
+.clc-dot-amber {
+    background: #f59e0b;
+}
+
+.clc-dot-green {
+    background: #22c55e;
+}
+
+.clc-dot-red {
+    background: #ef4444;
+}
+
+/* ── Feature insight row ─────────────────────────────── */
+.feat-insight-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 0.9rem;
+}
+
+.feat-insight-cell {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+}
+
+.feat-insight-name {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    margin-bottom: 3px;
+}
+
+.feat-insight-desc {
+    font-size: 0.7rem;
+    color: #5a6a7d;
+    line-height: 1.5;
+}
+
+.feat-insight-risk {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 8px;
+    margin-top: 4px;
+}
+
+.fr-yes {
+    background: #0a2010;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.fr-warn {
+    background: #1a1000;
+    color: #fbbf24;
+    border: 1px solid #78350f;
+}
+
+/* ── How It Works page styles ────────────────────────── */
+.hiw-hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-bottom: 18px;
+}
+
+.hiw-card {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 16px;
+    padding: 1.5rem 1.6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hiw-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    border-radius: 16px 16px 0 0;
+}
+
+.hiw-card-title {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 1rem;
+}
+
+.hiw-card-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #0f2240;
+    border: 1px solid #1d4ed8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.hiw-card p {
+    font-size: 0.79rem;
+    color: #6b7a8d;
+    line-height: 1.7;
+    margin: 0 0 0.5rem;
+}
+
+.hiw-card p:last-child {
+    margin-bottom: 0;
+}
+
+.hiw-card strong {
+    color: #93c5fd;
+}
+
+.hiw-card em {
+    color: #a5b4fc;
+    font-style: italic;
+}
+
+.maint-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin: 0.9rem 0 0;
+}
+
+.maint-cell {
+    border-radius: 10px;
+    padding: 0.8rem 1rem;
+    font-size: 0.72rem;
+    line-height: 1.5;
+}
+
+.maint-cell-label {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+}
+
+.maint-reactive {
+    background: #2d1515;
+    border: 1px solid #7f1d1d;
+}
+
+.maint-reactive .maint-cell-label {
+    color: #f87171;
+}
+
+.maint-reactive p {
+    color: #fca5a5;
+}
+
+.maint-schedule {
+    background: #241800;
+    border: 1px solid #78350f;
+}
+
+.maint-schedule .maint-cell-label {
+    color: #fbbf24;
+}
+
+.maint-schedule p {
+    color: #fde68a;
+}
+
+.maint-predict {
+    background: #0a2010;
+    border: 1px solid #166534;
+}
+
+.maint-predict .maint-cell-label {
+    color: #4ade80;
+}
+
+.maint-predict p {
+    color: #86efac;
+}
+
+.ds-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 0.7rem;
+}
+
+.ds-pill {
+    font-size: 0.71rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #0f2240;
+    color: #60a5fa;
+    border: 1px solid #1d4ed8;
+}
+
+.metrics-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.metric-tile {
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 12px;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.metric-tile-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.mt-blue {
+    background: #0f2240;
+    border: 1px solid #1d4ed8;
+}
+
+.mt-green {
+    background: #0a2010;
+    border: 1px solid #166534;
+}
+
+.mt-amber {
+    background: #1a1000;
+    border: 1px solid #78350f;
+}
+
+.mt-purp {
+    background: #12103a;
+    border: 1px solid #4338ca;
+}
+
+.metric-tile-name {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    margin-bottom: 2px;
+}
+
+.metric-tile-name .star {
+    color: #f59e0b;
+}
+
+.metric-tile-what {
+    font-size: 0.73rem;
+    color: #5a6a7d;
+    margin-bottom: 3px;
+    line-height: 1.5;
+}
+
+.metric-tile-why {
+    font-size: 0.71rem;
+    color: #3d4a5c;
+    line-height: 1.4;
+}
+
+.metric-tile-badge {
+    display: inline-block;
+    font-size: 0.62rem;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 8px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.badge-critical {
+    background: #200a0a;
+    color: #f87171;
+    border: 1px solid #7f1d1d;
+}
+
+.badge-important {
+    background: #1a1000;
+    color: #fbbf24;
+    border: 1px solid #78350f;
+}
+
+.wf-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.wf-step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+}
+
+.wf-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.wf-num {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.wf-num-blue {
+    background: #0f2240;
+    border: 2px solid #2563eb;
+    color: #60a5fa;
+}
+
+.wf-num-green {
+    background: #0a2010;
+    border: 2px solid #16a34a;
+    color: #4ade80;
+}
+
+.wf-line {
+    width: 2px;
+    flex: 1;
+    min-height: 18px;
+    background: #2563eb22;
+    margin: 3px 0;
+}
+
+.wf-card {
+    flex: 1;
+    background: #181b22;
+    border: 1px solid #22273a;
+    border-radius: 10px;
+    padding: 0.95rem 1.1rem;
+    margin-bottom: 8px;
+}
+
+.wf-card:hover {
+    border-color: #2563eb44;
+}
+
+.wf-card-title {
+    font-size: 0.83rem;
+    font-weight: 700;
+    color: #c8d8ea;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 6px;
+}
+
+.wf-card-body {
+    font-size: 0.75rem;
+    color: #5a6a7d;
+    line-height: 1.6;
+}
+
+.wf-tag {
+    display: inline-block;
+    font-size: 0.63rem;
+    font-weight: 700;
+    padding: 1px 7px;
+    border-radius: 10px;
+    margin-left: 5px;
+    vertical-align: middle;
+    letter-spacing: 0.04em;
+}
+
+.wf-tag-blue {
+    background: #0f2240;
+    color: #60a5fa;
+    border: 1px solid #1d4ed8;
+}
+
+.wf-tag-grn {
+    background: #0a2010;
+    color: #4ade80;
+    border: 1px solid #166534;
+}
+
+.wf-tag-amb {
+    background: #1a1000;
+    color: #fbbf24;
+    border: 1px solid #78350f;
+}
+
+.wf-tag-red {
+    background: #1e0808;
+    color: #f87171;
+    border: 1px solid #7f1d1d;
+}
+
+.risk-pills {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin-top: 5px;
+}
+
+.rp {
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 10px;
+}
+
+
+/* ═══════════════════════════════════════════════════════════
+   MOBILE RESPONSIVENESS — Tablet + Phone
+   Breakpoints:
+     Tablet  : max-width 1024px
+     Mobile  : max-width 768px
+     Phone   : max-width 480px
+   Strategy  : All changes are ADDITIVE via @media queries.
+               Desktop rules remain untouched.
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Tablet (≤1024px) ─────────────────────────────────── */
+@media (max-width: 1024px) {
+
+    /* Main container — reduce side padding on tablets */
+    [data-testid="stMainBlockContainer"] {
+        padding: 1rem 1.5rem 2.5rem !important;
+    }
+
+    /* KPI strip — 2×2 grid on tablet */
+    .kpi-strip {
+        grid-template-columns: repeat(2, 1fr) !important;
+        border-radius: 14px !important;
+    }
+
+    .kpi-cell:first-child {
+        border-radius: 10px 0 0 0 !important;
+    }
+
+    .kpi-cell:last-child {
+        border-radius: 0 0 10px 0 !important;
+    }
+
+    .kpi-cell:nth-child(2) {
+        border-radius: 0 10px 0 0 !important;
+    }
+
+    .kpi-cell:nth-child(3) {
+        border-radius: 0 0 0 10px !important;
+    }
+
+    /* Stat tiles — 2 columns on tablet */
+    .stat-tiles {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Feature insight row — 2 columns on tablet */
+    .feat-insight-row {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Status indicator panel — stack columns */
+    .si-panel {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 1rem !important;
+    }
+
+    /* How-it-works hero grid — reduce gap */
+    .hiw-hero {
+        gap: 12px !important;
+    }
+
+    /* maint-row inside hiw-card — 1 column */
+    .maint-row {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+    }
+
+    /* metrics-grid — 1 column on tablet */
+    .metrics-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* insight-grid — 1 column on tablet */
+    .insight-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Tab font — slightly smaller */
+    [data-testid="stTabs"] button {
+        font-size: 0.78rem !important;
+        padding: 0.55rem 0.85rem !important;
+    }
+
+    /* pred-table — slightly reduced font */
+    .pred-table {
+        font-size: 0.78rem !important;
+    }
+
+    .pred-table th {
+        padding: 0.55rem 0.75rem !important;
+    }
+
+    .pred-table td {
+        padding: 0.5rem 0.75rem !important;
+    }
+}
+
+
+/* ── Mobile (≤768px) ──────────────────────────────────── */
+@media (max-width: 768px) {
+
+    /* ── Global spacing ──────────────────────────────── */
+    [data-testid="stMainBlockContainer"] {
+        padding: 0.75rem 0.85rem 2rem !important;
+    }
+
+    .block-container {
+        padding-top: 3rem !important;
+    }
+
+    /* ── Page title ──────────────────────────────────── */
+    .page-title {
+        font-size: 1.6rem !important;
+        letter-spacing: -0.02em !important;
+    }
+
+    .phase-title {
+        font-size: 1.25rem !important;
+    }
+
+    /* ── Sidebar: Streamlit hides it behind hamburger on
+       mobile by default; ensure our CSS doesn't
+       block that native behaviour ─────────────────── */
+    [data-testid="stSidebar"] {
+        /* Allow Streamlit's built-in collapse to work */
+        min-width: 0 !important;
+    }
+
+    [data-testid="stSidebar"][aria-expanded="true"] {
+        min-width: 260px !important;
+        max-width: 80vw !important;
+    }
+
+    /* ── Brand header — compact on small screens ─────── */
+    .brand-header {
+        padding: 1rem 0.9rem 0.9rem !important;
+    }
+
+    .brand-title {
+        font-size: 1.1rem !important;
+    }
+
+    .brand-subtitle {
+        font-size: 0.72rem !important;
+    }
+
+    /* ── KPI strip — fully single column on phones ───── */
+    .kpi-strip {
+        grid-template-columns: 1fr 1fr !important;
+        gap: 2px !important;
+        border-radius: 12px !important;
+    }
+
+    .kpi-cell {
+        padding: 0.85rem 1rem !important;
+    }
+
+    .kpi-num {
+        font-size: 1.75rem !important;
+    }
+
+    .kpi-lbl {
+        font-size: 0.63rem !important;
+    }
+
+    .kpi-sub {
+        font-size: 0.65rem !important;
+    }
+
+    /* ── Alert banners — stack icon + text ───────────── */
+    .alert-critical,
+    .alert-ok,
+    .alert-info {
+        flex-wrap: wrap !important;
+        padding: 0.85rem 1rem !important;
+        font-size: 0.82rem !important;
+        border-radius: 10px !important;
+        gap: 8px !important;
+    }
+
+    /* ── Tabs — touch-friendly, allow scrolling ──────── */
+    [data-testid="stTabs"] {
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+        /* Firefox */
+    }
+
+    [data-testid="stTabs"]::-webkit-scrollbar {
+        display: none !important;
+        /* Chrome/Safari */
+    }
+
+    [data-testid="stTabs"] button {
+        font-size: 0.74rem !important;
+        padding: 0.65rem 0.85rem !important;
+        min-width: max-content !important;
+        /* prevent tab text wrapping */
+        flex-shrink: 0 !important;
+    }
+
+    [data-testid="stTabsContent"] {
+        padding-top: 0.85rem !important;
+    }
+
+    /* ── pred-table — horizontal scroll container ─────── */
+    .pred-table-wrap {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        border-radius: 10px !important;
+        /* subtle fade on the right to hint at scrollability */
+        background:
+            linear-gradient(to right, transparent 85%, #0d0f12) right / 40px 100% no-repeat,
+            transparent;
+    }
+
+    .pred-table {
+        font-size: 0.72rem !important;
+        min-width: 640px !important;
+        /* prevents collapse — let it scroll */
+    }
+
+    .pred-table th {
+        padding: 0.5rem 0.65rem !important;
+        font-size: 0.62rem !important;
+    }
+
+    .pred-table td {
+        padding: 0.45rem 0.65rem !important;
+    }
+
+    .tpill {
+        font-size: 0.66rem !important;
+        padding: 2px 6px !important;
+    }
+
+    /* ── cmp-table — horizontal scroll ──────────────── */
+    .cmp-table-wrap {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        border-radius: 10px !important;
+    }
+
+    .cmp-table {
+        min-width: 400px !important;
+        font-size: 0.75rem !important;
+    }
+
+    .cmp-table th {
+        padding: 0.5rem 0.75rem !important;
+    }
+
+    .cmp-table td {
+        padding: 0.45rem 0.75rem !important;
+    }
+
+    .cmp-table .winner-badge {
+        display: none !important;
+    }
+
+    /* too cramped on mobile */
+
+    /* ── Filter row — wrap tags ──────────────────────── */
+    .filter-row {
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+
+    .shown-count {
+        width: 100% !important;
+        margin-left: 0 !important;
+        margin-top: 2px !important;
+    }
+
+    /* ── Panel cards ─────────────────────────────────── */
+    .panel-card {
+        padding: 1rem 1.1rem !important;
+        border-radius: 12px !important;
+    }
+
+    .panel-card-title {
+        font-size: 0.83rem !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+
+    .panel-card p {
+        font-size: 0.76rem !important;
+    }
+
+    /* ── Info pills — wrapping already handled; shrink size */
+    .info-pill,
+    .ds-pill {
+        font-size: 0.67rem !important;
+        padding: 2px 8px !important;
+    }
+
+    /* ── Stat tiles — 2 columns on mobile ───────────── */
+    .stat-tiles {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+    }
+
+    .stat-tile {
+        padding: 0.85rem 0.9rem !important;
+        gap: 10px !important;
+    }
+
+    .stat-tile-value {
+        font-size: 1.2rem !important;
+    }
+
+    .stat-tile-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.95rem !important;
+    }
+
+    /* ── Insight grid — 1 column on mobile ──────────── */
+    .insight-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    /* ── Feature insight row — 1 column on mobile ───── */
+    .feat-insight-row {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    /* ── SI panel — stack all 3 columns vertically ───── */
+    .si-panel {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 0.9rem 1rem !important;
+        border-radius: 12px !important;
+    }
+
+    /* ── How-it-works hero — stack cards ────────────── */
+    .hiw-hero {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .hiw-card {
+        padding: 1rem 1.1rem !important;
+        border-radius: 12px !important;
+    }
+
+    .hiw-card-title {
+        font-size: 0.83rem !important;
+    }
+
+    .hiw-card p {
+        font-size: 0.76rem !important;
+    }
+
+    /* ── Maintenance comparison row — 1 column ───────── */
+    .maint-row {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+    }
+
+    /* ── Metrics grid — 1 column ─────────────────────── */
+    .metrics-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .metric-tile {
+        padding: 0.85rem 1rem !important;
+        gap: 10px !important;
+    }
+
+    .metric-tile-icon {
+        width: 30px;
+        height: 30px !important;
+    }
+
+    /* ── Gauge bar labels — less spacing ─────────────── */
+    .gauge-labels {
+        font-size: 0.6rem !important;
+    }
+
+    .gauge-num {
+        font-size: 1.25rem !important;
+    }
+
+    .gauge-desc {
+        font-size: 0.72rem !important;
+    }
+
+    /* ── Workflow steps — tighten gap ────────────────── */
+    .wf-step {
+        gap: 10px !important;
+    }
+
+    .wf-card {
+        padding: 0.75rem 0.9rem !important;
+    }
+
+    .wf-card-title {
+        font-size: 0.78rem !important;
+    }
+
+    .wf-card-body {
+        font-size: 0.71rem !important;
+    }
+
+    .wf-num {
+        width: 30px;
+        height: 30px;
+        font-size: 0.75rem !important;
+    }
+
+    /* ── Chart label cards ───────────────────────────── */
+    .chart-label-card {
+        font-size: 0.76rem !important;
+        padding: 0.6rem 0.85rem !important;
+    }
+
+    /* ── fi-card — feature importance wrapper ─────────── */
+    .fi-card {
+        padding: 0.75rem 0.85rem !important;
+    }
+
+    /* ── Section headers ─────────────────────────────── */
+    .sec-hdr {
+        font-size: 0.6rem !important;
+        margin: 1rem 0 0.5rem !important;
+    }
+
+    /* ── Loaded pill ─────────────────────────────────── */
+    .loaded-pill {
+        font-size: 0.74rem !important;
+        padding: 0.45rem 0.75rem !important;
+    }
+
+    /* ── Model card in sidebar ───────────────────────── */
+    .model-card {
+        padding: 0.5rem 0.7rem !important;
+        font-size: 0.78rem !important;
+    }
+
+    /* ── req-box (required columns) — shrink padding ─── */
+    .req-box {
+        font-size: 0.72rem !important;
+        padding: 0.65rem 0.8rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* ── how-card ────────────────────────────────────── */
+    .how-card {
+        padding: 0.9rem 1rem !important;
+        border-radius: 12px !important;
+    }
+
+    .how-card h4 {
+        font-size: 0.82rem !important;
+    }
+
+    .how-card p,
+    .how-card li {
+        font-size: 0.76rem !important;
+    }
+
+    /* ── sb-metric bars ──────────────────────────────── */
+    .sb-metric {
+        padding: 0 0.85rem !important;
+    }
+
+    .sb-metric-value {
+        font-size: 0.78rem !important;
+    }
+
+    /* ── risk pills on workflow ──────────────────────── */
+    .risk-pills {
+        gap: 4px !important;
+    }
+
+    .rp {
+        font-size: 0.62rem !important;
+        padding: 2px 6px !important;
+    }
+
+    /* ── Streamlit native file uploader – full width ─── */
+    [data-testid="stFileUploaderDropzone"] {
+        padding: 1rem !important;
+    }
+
+    /* ── band rows in SI panel ───────────────────────── */
+    .band-row {
+        font-size: 0.73rem !important;
+        gap: 6px !important;
+    }
+
+    /* ── Best badge ──────────────────────────────────── */
+    .best-badge {
+        font-size: 0.72rem !important;
+        padding: 0.35rem 0.6rem !important;
+        border-radius: 6px !important;
+    }
+
+    /* ── sb-data-card ────────────────────────────────── */
+    .sb-data-card {
+        font-size: 0.7rem !important;
+    }
+
+    .sb-data-name {
+        font-size: 0.72rem !important;
+    }
+
+    /* ── Streamlit columns forced equal on mobile ─────── */
+    /* The filter row (4 columns) needs to wrap gracefully */
+    [data-testid="stHorizontalBlock"] {
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+    }
+}
+
+
+/* ── Phone (≤480px) ───────────────────────────────────── */
+@media (max-width: 480px) {
+
+    /* ── Main padding — nearly full bleed ───────────── */
+    [data-testid="stMainBlockContainer"] {
+        padding: 0.5rem 0.6rem 1.5rem !important;
+    }
+
+    /* ── Page title — compact ────────────────────────── */
+    .page-title {
+        font-size: 1.35rem !important;
+    }
+
+    /* ── KPI strip — fully single column ────────────── */
+    .kpi-strip {
+        grid-template-columns: 1fr !important;
+        border-radius: 10px !important;
+        gap: 1px !important;
+    }
+
+    .kpi-cell:first-child {
+        border-radius: 10px 10px 0 0 !important;
+    }
+
+    .kpi-cell:nth-child(2) {
+        border-radius: 0 !important;
+    }
+
+    .kpi-cell:nth-child(3) {
+        border-radius: 0 !important;
+    }
+
+    .kpi-cell:last-child {
+        border-radius: 0 0 10px 10px !important;
+    }
+
+    .kpi-num {
+        font-size: 1.6rem !important;
+    }
+
+    /* ── Stat tiles — 1 column on small phones ───────── */
+    .stat-tiles {
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+    }
+
+    /* ── Tabs — even smaller text on very small screens  */
+    [data-testid="stTabs"] button {
+        font-size: 0.68rem !important;
+        padding: 0.55rem 0.65rem !important;
+    }
+
+    /* ── Alert banners ───────────────────────────────── */
+    .alert-critical,
+    .alert-ok,
+    .alert-info {
+        font-size: 0.77rem !important;
+    }
+
+    /* ── Panel cards ─────────────────────────────────── */
+    .panel-card {
+        padding: 0.85rem 0.9rem !important;
+    }
+
+    /* ── hiw-card ────────────────────────────────────── */
+    .hiw-card {
+        padding: 0.85rem 0.9rem !important;
+    }
+
+    /* ── Workflow ────────────────────────────────────── */
+    .wf-card {
+        padding: 0.65rem 0.75rem !important;
+    }
+
+    /* ── Reduce chart margin on small screens ────────── */
+    .js-plotly-plot .plotly .main-svg {
+        font-size: 10px !important;
+    }
+}
+
+
+/* ── Touch / Hover improvements (all mobile) ──────────── */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Increase tap target size for interactive elements */
+    [data-testid="stTabs"] button {
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+    }
+
+    /* Bigger radio buttons in sidebar */
+    div[data-testid="stSidebar"] .stRadio label {
+        min-height: 44px !important;
+    }
+
+    /* Streamlit selectbox / slider — ensure usable touch targets */
+    [data-testid="stSelectbox"]>div,
+    [data-testid="stSlider"] {
+        min-height: 44px !important;
+    }
+
+    /* Remove hover effects that cause sticky-hover bugs on iOS */
+    .model-card:hover,
+    .wf-card:hover {
+        border-color: inherit !important;
+        background: inherit !important;
+    }
+
+    /* Prevent double-tap zoom on buttons */
+    button {
+        touch-action: manipulation !important;
+    }
+}
+
+
+
+/* ── req-box: prevent text overflow, ensure wrapping ─────
+   The [3,1] Streamlit column can get very narrow on tablets;
+   force text to wrap rather than clip or overflow.          */
+.req-box {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+/* ── stat-tiles-3col: desktop is always 3 columns.
+   Media queries reduce it. The inline style was removed
+   from the HTML so @media overrides now work correctly.     */
+.stat-tiles-3col {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+@media (max-width: 768px) {
+    .stat-tiles-3col {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-tiles-3col {
+        grid-template-columns: 1fr !important;
+    }
+}

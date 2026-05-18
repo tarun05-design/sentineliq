@@ -1,0 +1,53 @@
+{
+  "random_forest": {
+    "accuracy": 0.977,
+    "precision": 0.6195652173913043,
+    "recall": 0.8382352941176471,
+    "f1": 0.7125,
+    "roc_auc": 0.9737509134088419,
+    "avg_prec": 0.8276619346186153,
+    "cv_f1_mean": 0.9853554719158344,
+    "cv_f1_std": 0.0019201207293963495
+  },
+  "gradient_boosting": {
+    "accuracy": 0.9555,
+    "precision": 0.42758620689655175,
+    "recall": 0.9117647058823529,
+    "f1": 0.5821596244131455,
+    "roc_auc": 0.9787556326878577,
+    "avg_prec": 0.8346975880698937,
+    "cv_f1_mean": 0.9691821018266911,
+    "cv_f1_std": 0.003893373093556258
+  },
+  "feature_names": [
+    "type_encoded",
+    "air_temperature",
+    "process_temperature",
+    "rotational_speed",
+    "torque",
+    "tool_wear",
+    "temp_diff",
+    "power_proxy"
+  ],
+  "rf_importances": {
+    "power_proxy": 0.1975939327708954,
+    "torque": 0.19736481647652027,
+    "rotational_speed": 0.19479059661345718,
+    "tool_wear": 0.1933215545356374,
+    "temp_diff": 0.0928158372243274,
+    "air_temperature": 0.05831921441392542,
+    "process_temperature": 0.03664227747149547,
+    "type_encoded": 0.02915177049374142
+  },
+  "gb_importances": {
+    "rotational_speed": 0.21785402652396463,
+    "tool_wear": 0.20949886963049155,
+    "power_proxy": 0.2001537690165308,
+    "torque": 0.17930401683966066,
+    "temp_diff": 0.10226742489176165,
+    "air_temperature": 0.0361479226283297,
+    "process_temperature": 0.03153518474618062,
+    "type_encoded": 0.02323878572308043
+  },
+  "best_model": "Random Forest"
+}
