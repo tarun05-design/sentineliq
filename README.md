@@ -146,6 +146,10 @@ An in-app explainer covering predictive vs reactive vs scheduled maintenance, wh
 
 ---
 
+## 🚀 Live Demo
+
+🔗 [Launch SentinelIQ](https://sentineliq.streamlit.app)
+
 ## How It Works
 
 ### Input Format
