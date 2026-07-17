@@ -4,7 +4,7 @@ Real-time industrial sensor analytics and failure-risk intelligence powered by e
 
 SentinelIQ is a machine learning dashboard built with Python and Streamlit. It ingests raw industrial sensor readings, processes physical stress signals ($\Delta T$ and Mechanical Power), and evaluates real-time operational risk through ensemble models to prevent costly equipment breakdowns before they occur.
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-sentineliq.streamlit.app-46E3B7?style=for-the-badge&logo=streamlit&logoColor=black)](https://sentineliq.streamlit.app)
+[![Live Demo](https://img.shields.io/badge/%20Live%20Demo-sentineliq.streamlit.app-46E3B7?style=for-the-badge&logo=streamlit&logoColor=black)](https://sentineliq.streamlit.app)
 
 ![python](https://img.shields.io/badge/python-3.9+-blue?style=flat) ![streamlit](https://img.shields.io/badge/streamlit-1.32+-red?style=flat) ![scikit-learn](https://img.shields.io/badge/model-random%20forest%20%7C%20gradient%20boosting-orange?style=flat) ![plotly](https://img.shields.io/badge/charts-plotly-purple?style=flat) ![license](https://img.shields.io/badge/license-MIT-green?style=flat)
 
