@@ -35,17 +35,19 @@ SentinelIQ is a machine learning dashboard built with Python and Streamlit. It i
 
 ```mermaid
 flowchart TD
-    A[Raw Machine Sensors\nAir Temp, Process Temp, Speed, Torque, Wear] --> B[Input Validation & Normalization]
-    B --> C[Feature Engineering Engine]
+    A["Raw Machine Sensors<br/>Air Temp, Process Temp, Speed, Torque, Wear"] --> B["Input Validation & Normalization"]
+    B --> C["Feature Engineering Engine"]
     C --> D1["Temp Delta (ΔT = Process - Air)"]
     C --> D2["Power Proxy (Torque × RPM)"]
-    D1 & D2 --> E[Scaler & Preprocessing Pipeline]
-    E --> F{Model Selector}
-    F -->|Ensemble 1| G1[Random Forest Classifier]
-    F -->|Ensemble 2| G2[Gradient Boosting Classifier]
-    G1 & G2 --> H[Probability Score Generation]
-    H --> I[Risk Tier Bucketizer\nLow | Medium | High | Critical]
-    I --> J[Streamlit Dashboard & Maintenance Schedule Export]
+    D1 --> E["Scaler & Preprocessing Pipeline"]
+    D2 --> E
+    E --> F{"Model Selector"}
+    F -->|Ensemble 1| G1["Random Forest Classifier"]
+    F -->|Ensemble 2| G2["Gradient Boosting Classifier"]
+    G1 --> H["Probability Score Generation"]
+    G2 --> H
+    H --> I["Risk Tier Bucketizer<br/>Low, Medium, High, Critical"]
+    I --> J["Streamlit Dashboard & Maintenance Schedule Export"]
 ```
 
 ---
