@@ -123,6 +123,6 @@ The application will automatically launch in your default web browser at `http:/
 ## 👤 Author & Connect
 
 **Tarun P** — Machine Learning & Full Stack Developer
-- 🌐 Portfolio: [tarun-portfolio.vercel.app](https://tarun-portfolio.vercel.app)
+- 🌐 Portfolio: [tarun-ml.vercel.app](https://tarun-ml.vercel.app/)
 - 🐙 GitHub: [@tarun05-design](https://github.com/tarun05-design)
 - 📧 Email: [tarunparthasarathy65@gmail.com](mailto:tarunparthasarathy65@gmail.com)
